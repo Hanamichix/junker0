@@ -101,7 +101,7 @@
 			"name": "box",
 			"description": "a box",
 			"owner": 2,
-			"imageURL": "/images/box.jpg",
+			"imageURL": "/images/box.JPG",
 			"interested": [
 				{
 					"userid": null,
