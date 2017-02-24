@@ -19,7 +19,8 @@ exports.view = function(req, res){
 			"hisitem": data.items[hisitemindex].name,
 			"hisitemdis": data.items[hisitemindex].description,
 			"hisurl": data.items[hisitemindex].imageURL,
-			"hisname": data.accounts[ownerid - 1].name
+			"hisname": data.accounts[ownerid - 1].name,
+			"email": data.accounts[ownerid - 1].email
 
 		}
 		items.items.push(matchdata);
