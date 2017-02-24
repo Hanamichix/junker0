@@ -1,0 +1,149 @@
+{
+	"accounts": [
+		{
+			"userid" : 1,
+			"name": "Doug Engelbart",
+			"posts": [1, 5],
+			"contact": 12345,
+			"email": "admin0@gmail.com",
+			"bio": "student",
+			"phone": 8584055160,
+			"facebook": "https://www.facebook.com/profile.php?id=100011153497254",
+			"twitter": "",
+			"matches": [
+			]
+	
+		},
+		{
+			"userid" : 2,
+			"name": "Ivan Sutherland",
+			"posts": [2, 4],
+			"contact": 12345,
+			"email": "admin1@gmail.com",
+			"bio": "student",
+			"phone": 8584055161,
+			"facebook": "https://www.facebook.com/profile.php?id=100011153497254",
+			"twitter": "",
+			"matches": [
+			]		
+		},
+		{
+			"userid" : 3,
+			"name": "Lucy Suchman",
+			"posts": [3, 6],
+			"contact": 12345,
+			"email": "admin2@gmail.com",
+			"bio": "student",
+			"phone": 8584055162,
+			"facebook": "https://www.facebook.com/profile.php?id=100011153497254",
+			"twitter": "",
+			"matches": [
+			]
+		}
+
+	],
+	"items": [
+		{
+			"itemid": 1,
+			"name": "pencil",
+			"description": "a pencil",
+			"owner": 1,
+			"imageURL": "/images/pencil.jpg",	
+			"interested": [
+				{
+					"userid": 2,
+					"tradewith": 2
+
+				},
+				
+				{
+					"userid": 3,
+					"tradewith": 3
+				}
+			],
+			"deal" : false	
+		},
+		{
+			"itemid": 2,
+			"name": "football",
+			"description": "a football",
+			"owner": 2,
+			"imageURL": "/images/football.jpg",
+			"interested": [
+				{
+					"userid": 1,
+					"tradewith": 1
+				}
+			],
+			"deal" : false			
+		},
+		{
+			"itemid": 3,
+			"name": "bag",
+			"description": "a bag",
+			"owner": 3,
+			"imageURL": "/images/bag.jpg",
+			"interested": [
+				{
+					"userid": 1,
+					"tradewith": 1
+				},
+				{
+					"userid": 2,
+					"tradewith": 4
+				}
+
+			],
+			"deal" : true			
+		},
+		{
+			"itemid": 4,
+			"name": "box",
+			"description": "a box",
+			"owner": 2,
+			"imageURL": "/images/box.jpg",
+			"interested": [
+				{
+					"userid": null,
+					"tradewith": null
+				}
+			],
+			"deal" : false			
+
+
+		},
+		{
+			"itemid": 5,
+			"name": "sharpie",
+			"description": "a sharpie",
+			"owner": 1,
+			"imageURL": "/images/sharpie.jpg",
+			"interested": [
+				{
+					"userid": 3,
+					"tradewith": 3
+				}
+			],
+			"deal" : false			
+
+		},
+		{
+			"itemid": 6,
+			"name": "bike",
+			"description": "a bike",
+			"owner": 3,
+			"imageURL": "/images/bike.jpg",
+			"interested": [
+				{
+					"userid": null,
+					"tradewith": null
+				}
+			],
+			"deal" : false			
+
+
+		}
+	]
+
+
+}

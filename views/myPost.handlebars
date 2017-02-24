@@ -1,0 +1,213 @@
+<!doctype html>
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>myPost</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/myposts.css" rel="stylesheet">
+        <link href = "css/bootstrap.css" rel = "stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/browse.css" rel="stylesheet">
+  <link href="css/sidebar.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script src="js/browse.js"></script>
+  <script src="js/sidebar.js"></script>
+    <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+        function myFunction() {
+            document.getElementById("myNavigator").classList.toggle("show");
+        }
+
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(e) {
+            if (!e.target.matches('.dropbtn')) {
+                if (e.target.matches('.dropdown-content')){
+                    return;
+                }
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                for (var d = 0; d < dropdowns.length; d++) {
+                    var openDropdown = dropdowns[d];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- this is a comment in HTML -->
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->   
+    <style>
+    .Menu {
+        width: 100%;
+    }
+    .Menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333333;
+    }
+
+    .Menu ul li {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 16px;
+        text-decoration: none;
+    }
+
+    .Menu ul li a {
+        display: block;
+        color: black;
+        text-align: center;
+        text-decoration: none;
+    }
+
+    .Menu ul li a:hover {
+        background-color: #111111;
+    }
+    img {
+        width: 90%;
+        height: 250px;
+        position: relative;
+    }
+    .dropdown-content {
+        position: fixed;
+        z-index: 999;
+        display: none;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        position: relative;
+        color: black;
+        z-index: 999;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        position: relative;
+        z-index: 999;
+    }
+    .show {display:block;}
+    .posts {
+        display: inline-block;
+        padding: 0 25px;
+        height: 200px;
+        width: 100%;
+        font-size: 20px;
+        line-height: 50px;
+        border-radius: 25px;
+        background-color: #f1f1f1;
+    }
+
+    .posts img {
+        float: left;
+        margin: 0 10px 0 -25px;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+    }
+    #newPost {
+        margin-top: 10px;
+        text-align: center;
+    }
+    ul a { display: block; position: relative; width: 100%; }
+    ul li h2 { font-size: 2.1em; line-height: 1.3em; font-weight: normal; letter-spacing: -0.03em; padding-top: 4px; color: #55678d; }
+    ul li .desc { color: #555; font-family: Arial, sans-serif; font-size: 1.3em; line-height: 1.3em; white-space: nowrap; overflow: hidden; }
+
+    ul li img.thumbnail { 
+        background: #fff;
+        display: inline-block;
+        float: left;
+        padding: 2px;
+        margin-top: 6px;
+        margin-left: 5px;
+        margin-right: 8px;
+        -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+        box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+    }
+
+    .clearfix:after { content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0; }
+    .clearfix { display: inline-block; }
+ 
+    html[xmlns] .clearfix { display: block; }
+    * html .clearfix { height: 1%; }
+
+    </style> 
+</head>
+<body>
+    <div id="container">
+        <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+        <!-- p means paragraph -->
+        <nav class="navbar navbar-default navbar-collapse">
+      <div class="container-fluid">
+        <div class = "navbar-header">
+        <span style="font-size:30px;float:left; width:20%; top:5px " onclick="openNav()" class = "glyphicon">&#xe055;</span>
+        <span style="font-size:30px;float:right; top:5px"  class = "glyphicon"><a href="index" style="color:black">&#xe021;</a></span>
+        <span style="font-size:30px; margin:5 20%">My Post</span>
+        <!--
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="match"> Matches</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        -->
+      </div>
+      </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="match">Matches</a>
+      <a href="browse">Browse</a>
+      <a href="profile">Profile</a>
+
+
+    </div>
+        <div id="newPost">
+            <a href="newPost">
+                <button class="btn btn-lg btn-primary">Post an Item</button>
+            </a>
+        </div>
+        <ul>
+            {{#each posts}}
+            <a href="#"><li class="clearfix">
+                <img src={{imageURL}} alt="thumb" class="thumbnail">
+                <h2>{{name}}</h2>
+                <p class="desc">{{description}} </p>
+                     
+                <span class="desc">Itemid : {{itemid}}</span>
+            </li></a>
+            {{/each}}
+        </ul>
+    </div>
+
+    <script src="/js/exchange.js"></script>
+</body>
+</html>

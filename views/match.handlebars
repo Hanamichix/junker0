@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html>
+<head>
+    <title>Matches</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+    <link href = "css/bootstrap.css" rel = "stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/browse.css" rel="stylesheet">
+  <link href="css/sidebar.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  <script src="js/browse.js"></script>
+  <script src="js/sidebar.js"></script>
+</head>
+<body>
+    <div class="container" id = "container">
+        <!-- h1 through h6 are headers. The higher the number, the smaller the header -->
+        <!-- p means paragraph -->
+
+    <nav class="navbar navbar-default navbar-collapse">
+        <div class="container-fluid">
+            <div class = "navbar-header">
+            <span style="font-size:30px;float:left; width:20%; top:5px " onclick="openNav()" class = "glyphicon">&#xe055;</span>
+            <span style="font-size:30px;float:right; top:5px"  class = "glyphicon"><a href="index" style="color:black">&#xe021;</a></span>
+            <span style="font-size:30px; margin:5 20%">Matches</span>
+        <!--
+
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="match"> Matches</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="index"><span class="glyphicon glyphicon-home"></span></a></li>
+          <li><a href="login"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+        -->
+            </div>
+        </div>
+    </nav>
+
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="browse">Browse</a>
+      <a href="newpost">Create New Post</a>
+      <a href="profile">Profile</a>
+    </div>
+
+    {{#each items}}
+      <div id="{{id}}">
+        <div class="panel panel-default">
+            <div class="panel-heading"><h4>{{youritem}}</h4></div>
+            <img src="{{yoururl}}" class = "img" style = "max-width: 20%;height:auto;display: block"/>
+            <div class="panel-body">{{youritemdis}}</div>
+            <div class="panel-heading"><h4>{{hisitem}}</h4></div>
+            <img src="{{hisurl}}" class = "img" style = "max-width: 20%;height:auto;display: block"/>
+            <div class="panel-body">{{hisitemdis}}</div>
+            <div class="panel-heading"><h4>{{hisname}}</h4></div>
+            <div class="panel-body">{{email}}</div>
+
+        </div>
+      </div>
+    {{/each}}
+
+
+
+    </div>

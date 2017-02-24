@@ -1,0 +1,60 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>Log In</title> 
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href = "css/signup.css" rel = "stylesheet">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script> 
+
+
+
+</head>
+<body>
+  <div class="login-signup s-atbottom" id="signup">
+      <div class="login-signup-title">
+        SIGN UP
+      </div>
+      <form class="login-signup-content" method="get" action = "/signed">
+        <div class="input-name input-margin">
+            <h2>Legal Name</h2>
+        </div>
+        <input type="text" name="name" value="" class="field-input" />
+
+        <div class="input-name input-margin">
+            <h2>Username (E-Mail) </h2>
+        </div>
+        <input type="text" name="email" value="" class="field-input" />
+
+        <div class="input-name input-margin">
+            <h2>Password</h2>
+        </div>
+        <input type="text" name="password" value="" class="field-input" />
+
+        <div class="input-name input-margin">
+            <h2>Biography</h2>
+        </div>
+        <input type="text" name="bio" value="" class="field-input" />
+
+        <div class="input-name input-margin">
+            <h2>Phone Number</h2>
+        </div>
+        <input type="text" name="phone" value="" class="field-input" />
+
+        <div class="input-name input-margin">
+            <h2>Picture</h2>
+        </div>
+        <div>
+          <input type="file" accept="image/*" onchange="picChange(event)"/>
+        </div>
+
+        <input type="submit" value="Submit!" /> 
+
+
+      </form>
+  </div>
+</body>
